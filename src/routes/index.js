@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const Tarea =require("../models/tarea");
+const Carga = require("../models/Carga");
 
 const router = Router();
 
@@ -12,9 +12,16 @@ router.post('/add', async (req, res) => {
     const title = req.body.title;
     console.log(`Description: ${title}`);
 
-    const tarea = new Tarea();
-    await tarea.save();
-    
+    const carga = new Carga();
+    await carga.save();
+
     res.redirect('/');
 });
+
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    const carga = Carga.findOne(id);
+    console.log('id: ' + carga);
+});
+
 module.exports = router;

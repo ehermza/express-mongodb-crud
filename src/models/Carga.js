@@ -8,4 +8,4 @@ const tareaSchema = new Schema(
         status: { type: Boolean, default: false }
     });
 
-module.exports = model('tarea', tareaSchema);
+module.exports = model('charge', tareaSchema);

@@ -1,6 +1,6 @@
 const mongo = require('mongoose');
 
-mongo.connect('mongodb://localhost/crud-mongo', {
+mongo.connect('mongodb://localhost/ad530pr', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
