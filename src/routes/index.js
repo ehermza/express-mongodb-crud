@@ -1,4 +1,5 @@
 const { Router } = require("express");
+<<<<<<< HEAD
 const Carga = require("../models/Carga");
 
 const router = Router();
@@ -24,4 +25,13 @@ router.get('/:id', (req, res) => {
     console.log('id: ' + carga);
 });
 
+=======
+// require("../models/index");
+
+const router = Router();
+
+router.get('/', (req, res) =>{
+    res.render('index')
+})
+>>>>>>> parent of b0e9004... Update form-data to mongo database, ok.
 module.exports = router;
